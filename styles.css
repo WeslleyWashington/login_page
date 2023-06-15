@@ -223,9 +223,9 @@ body {
     position: absolute;
     width: 6rem;
     height: 6rem;
-    border: 6px solid #383536;
+    border: 6px solid #ffffff;
     border-radius: 50%;
-    border-top-color: #F8B133;
+    border-top-color: #1d60f1;
     mask-border-mode: radial-gradient(
       farthest-side,
       #0000 calc(110% - 10px),
