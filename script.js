@@ -29,7 +29,7 @@ let inputLogin= document.getElementById('login');
              let inputLogin= document.getElementById('login');
              let inputPassword= document.getElementById('password');
 
-             if (inputLogin.value.length <= 5 && inputPassword.value.length <= 5 ) {
+             if (inputLogin.value.length && inputPassword.value.length <= 5 ) {
                 
                 classe.style='margin-left: 0.3rem; width: 18rem; height: 2rem; margin-top: 2rem; font-size: 0.9rem; color: #646464; background-color: #d7d7d7; border: 0; border-radius: 5px;'
             } else {
@@ -56,7 +56,7 @@ let inputLogin= document.getElementById('login');
             let inputLogin = document.getElementById('login');
             let inputPassword = document.getElementById('password');
 
-            if (inputLogin.value.length >= 5 && inputPassword.value.length >= 5){ 
+            if (inputLogin.value.length && inputPassword.value.length >= 5){ 
 
                 classe.style='margin-left: 0.3rem; width: 18rem; height: 2rem; margin-top: 2rem; color: #ffffff; font-size: 0.9rem; background-color: #434343; border: 0; border-radius: 5px; cursor: pointer;'  
                 
