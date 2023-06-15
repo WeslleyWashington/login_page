@@ -146,6 +146,7 @@ body {
     border: 1px solid #bbbbbb;
     color: #080808;
     outline: none;
+    border-radius: 5px;
 }
 
 .transition {
@@ -182,6 +183,7 @@ body {
     font-size: 0.8rem;
     margin-top: 0.7rem;
     margin-left: 0.3rem;
+
 }
 
 @media(max-width: 650px) {
