@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="/assets/icon-install1.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+   
+
+    <title>Install Tracker</title>
+
+    
+</head>
+<body>
+    <main>
+        <div class="container">
+
+            <div class="campo_apresentacao">
+                <img class="imagem_logo" src="/assets/Install-tracker.png" alt="Logo">
+                
+                <div class="textos">
+                    <h3 class="titulo">Bem Vindo à Install Tracker</h3>
+                    <h6 class="subtitulo">Fique conectado com seu veículo 24 horas por dia.</h6>
+
+                </div>
+            </div>
+    
+            <div class="campo_forms">
+                <h6 class="titulo_forms">Faça login na sua conta</h6>
+
+                <form class="formulario">
+
+                    <label for="email">E-mail:</label>
+
+                    <input id="login"
+                    placeholder="E-mail" 
+                    type="email" 
+                    id="email"
+                    name="email"
+                    
+                    required>
+                        
+                    <label for="password">Senha:</label>
+
+                    <input  
+                    placeholder="Senha" 
+                    type="password" 
+                    id="password" 
+                    name="password"
+                    onkeyup="valida_form()"
+                    
+
+                    required>
+
+                    <button type="submit" id="botao"  
+                    class="desabilitado" 
+                    onmouseover="mouseOver()"
+                    onmouseout="mouseOut()"
+                    onclick="handleLogin()"
+                    disabled
+                    >Login</button>
+
+                </form>
+            
+            </div>
+            <div class="container_loader">
+                <div class="spinner"></div>
+            </div>
+            
+        </div>
+        
+    </main>
+
+
+    <script>
+
+            let inputLogin= document.getElementById('login');
+            let inputPassword= document.getElementById('password');
+
+            inputLogin.addEventListener('input', atualizarClasses, mouseOver)
+            inputPassword.addEventListener('input', atualizarClasses, mouseOver)
+
+
+        function valida_form (){
+
+            //busca conteúdo do input
+            var conteudo = document.getElementById("login").value;
+
+            var senha = document.getElementById("password").value;
+        
+            //valida conteudo do input 
+            if (conteudo !== null && conteudo !== '' && senha !== null && senha !== '') {
+            //habilita o botão
+            document.getElementById("botao").disabled = false;
+            } else {
+            //desabilita o botão se o conteúdo do input ficar em branco
+            document.getElementById("botao").disabled = true;
+            }
+        }
+
+        function atualizarClasses() {
+            
+             let classe= document.getElementById('botao'); // Seleciona o elemento HTML
+
+             let inputLogin= document.getElementById('login');
+             let inputPassword= document.getElementById('password');
+
+             if (inputLogin.value.length <= 5 && inputPassword.value.length <= 5 ) {
+                
+                classe.style='width: 18rem; height: 2rem; margin-top: 2rem; font-size: 0.9rem; color: #646464; background-color: #d7d7d7; border: 0; border-radius: 5px;'
+            } else {
+                
+                classe.style='width: 18rem; height: 2rem; margin-top: 2rem; color: #ffffff; font-size: 0.9rem; background-color: #303030; border: 0; border-radius: 5px; cursor: pointer;'
+
+            }
+        }
+
+        function mouseOver() {
+            let classe = document.getElementById('botao');
+            let inputLogin = document.getElementById('login');
+            let inputPassword = document.getElementById('password');
+
+            if (inputLogin.value.length >= 5 && inputPassword.value.length >= 5){ 
+                
+                classe.style= 'width: 18rem; height: 2rem; margin-top: 2rem; color: #ffffff; font-size: 0.9rem; background-color: #202020; border: 0; border-radius: 5px; cursor: pointer;'
+                document.getElementById('botao').style.transition = "0.5s ease";
+            }
+        }
+
+        function mouseOut() {
+            let classe = document.getElementById('botao');
+            let inputLogin = document.getElementById('login');
+            let inputPassword = document.getElementById('password');
+
+            if (inputLogin.value.length >= 5 && inputPassword.value.length >= 5){ 
+
+                classe.style='width: 18rem; height: 2rem; margin-top: 2rem; color: #ffffff; font-size: 0.9rem; background-color: #434343; border: 0; border-radius: 5px; cursor: pointer;'  
+                
+            }
+        }
+
+        function handleLogin() {
+
+            document.querySelector(".container_loader").style.display = "flex";
+            
+        }
+
+    </script>
+</body>
+</html>
