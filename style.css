@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+
+body {
+    background-image: url('./assets/wallpaper.png');
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    
+}
+
+
+.container_principal {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+
+}
+
+
+.container_logo {
+    position: absolute;
+    background-color: #ffffff82;
+    border-radius: 10px;
+    height: 12rem;
+    width: auto;
+    display: flex;
+    align-items: center;
+    bottom: 55%;
+    left: 10%;
+}
+
+.logo {
+    width: 25rem;
+    height: auto;
+}
+
+.container_forms {
+    background-color: #0a0a0a78;
+    width: 30vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    align-items: flex-start;
+    gap: 0.2rem;
+
+}
+
+.titulo_forms {
+    color: white;
+    font-size: 1.7rem;
+    margin-top: 6rem;
+    line-height: 1.6;
+}
+
+.formulario label {
+    color: white;
+    font-size: 0.9rem;
+    margin-top: 0.7rem;
+    margin-left: 0.3rem;
+
+}
+
+
+.formulario input {
+    font-size: 0.9rem;
+    width: 16rem;
+    height: 0.6rem;
+    margin: 0.25rem;
+    padding: 1rem;
+    border: 1px solid #bbbbbb;
+    color: #080808;
+    outline: none;
+    border-radius: 5px;
+}
+
+.info {
+    position: fixed;
+    bottom: 5%;
+    background-color: #ffffffcc;
+    border-radius: 15px;
+    height: 3rem;
+    width: 21rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.info h6 {
+    font-size: 0.8rem;
+    color: rgb(0, 0, 0);
+}
+
+/* Botão */
+
+.transition {
+    width: 18rem;
+    height: 2rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #646464;
+    background-color: #d7d7d7;
+    border: 0;
+    border-radius: 5px;
+    transition: 0.5s ease;
+  }
+
+/* Classe do botão do forms */
+
+.desabilitado { 
+    width: 18rem;
+    height: 2rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #414141;
+    background-color: #d7d7d7;
+    border: 0;
+    border-radius: 5px;
+    margin-left: 0.3rem;
+
+}
+
+/* Loader de quando clica no botão */
+
+.container_loader {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000000ba;
+
+}
+
+.spinner {
+    position: absolute;
+    width: 6rem;
+    height: 6rem;
+    border: 6px solid #c5894b;
+    border-radius: 50%;
+    border-top-color: #05477b;
+    mask-border-mode: radial-gradient(
+      farthest-side,
+      #0000 calc(110% - 10px),
+      #000 0
+    );
+    animation: spin 0.5s infinite linear;
+}
+  
+@keyframes spin {
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+
+/* Responsividade geral */
+
+@media(max-width: 770px) {
+
+    body {
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100vh;
+    }
+
+    .container_principal {
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 1rem;
+    
+    }
+
+    .container_logo {
+        position: inherit;
+        height: 7rem;
+        margin-top: 0.5rem;
+    }
+
+    .logo {
+        width: 17rem;
+        height: auto;
+    }
+
+
+    .container_forms {
+        position: inherit;
+        width: 21rem;
+        height: 23rem;
+    }
+
+    .campo_forms {
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        left: 0;
+        right: 0;
+        margin-bottom: 2rem;
+        width: 20rem;
+        margin-top: -9rem;
+    }
+
+    .formulario {
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+        align-items: center;
+    }
+
+    .titulo_forms {
+        font-size: 1.3rem;
+        margin-top: 3rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .formulario input {
+        font-size: 0.8rem;
+        width: 16.5rem;
+        height: 0.4rem;
+    }
+
+    .formulario button {
+        width: 18rem;
+        height: 2rem;
+        margin-top: 2rem;
+        font-size: 0.9rem;
+        color: #414141;
+        background-color: #d7d7d7;
+        border: 0;
+        border-radius: 5px;
+        margin-left: 0.3rem;
+    }
+
+    .info {
+        bottom: 2%;
+        height: 2rem;
+        width: 17rem;
+        
+    
+    }
+    
+    .info h6 {
+        font-size: 0.65rem;
+        
+    }
+
+}

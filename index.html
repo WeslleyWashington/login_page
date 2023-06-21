@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/iconww.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <title>Login Wwahington</title>
+</head>
+
+<body> 
+    
+    <div class="container_principal">
+
+        <div class="container_logo">
+            <img  class="logo" src="assets/logo_ww.png" alt="Logo JL">
+        </div>
+    
+        <div class="container_forms">
+    
+            <h6 class="titulo_forms">Faça login na sua conta</h6>
+    
+                <form class="formulario">
+    
+                    <label for="usuario">Usuário:</label>
+    
+                    <input id="login"
+                    placeholder="Usuário" 
+                    type="text" 
+                    id="usuario"
+                    name="usuario"
+                    
+                    required>
+                        
+                    <label for="password">Senha:</label>
+    
+                    <input  
+                    placeholder="Senha" 
+                    type="password" 
+                    id="password" 
+                    name="password"
+                    onkeyup="valida_form()"
+                    
+    
+                    required>
+    
+                    <button type="submit" id="botao"  
+                    class="desabilitado" 
+                    onmouseover="mouseOver()"
+                    onmouseout="mouseOut()"
+                    onclick="handleLogin()"
+                    disabled
+                    >Login</button>
+    
+                </form>
+
+                <div class="info">
+                    <h6><strong>Desenvolvido por: Weslley Washington Dev Front-end</strong></h6>
+                </div>
+
+                
+        </div>
+
+        <div  id="resultado" class="container_loader">
+            <div class="spinner"></div>
+        </div>
+    
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
